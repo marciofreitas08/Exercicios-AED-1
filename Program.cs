@@ -1,35 +1,35 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace exer_classe_nota_dos_alunos
+namespace VerificaTriangulo2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Alunos aluno = new Alunos();
+            string entrada;
+            Triangulo objeto;
+            Console.WriteLine(" Verifica se tres valores infirmados formam um trianfulo:");
+            Console.Write(" Lado A:");
+            entrada = Console.ReadLine();
+            objeto = new Triangulo();
+            objeto.ladoA = Convert.ToInt32(entrada);
 
-            Console.Write("Nome do aluno: ");
-            aluno.Nome = Console.ReadLine();
+            Console.Write(" Lado B:");
+            entrada = Console.ReadLine();
+            objeto.ladoB = Convert.ToInt32(entrada);
 
-            Console.WriteLine("Digite as três notas do aluno:");
-            aluno.Nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            aluno.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write(" Lado C:");
+            entrada = Console.ReadLine();
+            objeto.ladoC = Convert.ToInt32(entrada);
 
-            Console.WriteLine("NOTA FINAL = " + aluno.NotaFinal().ToString("F2", CultureInfo.InvariantCulture));
+            objeto.verificaTriangulo();
 
-            if (aluno.Aprovado())
-            {
-                Console.WriteLine("APROVADO");
-            }
-            else
-            {
-                Console.WriteLine("REPROVADO");
-                Console.WriteLine("FALTARAM "
-                + aluno.NotaRestante().ToString("F2", CultureInfo.InvariantCulture)
-                + " PONTOS");
-            }
+
+
         }
-    }  
+    }
 }
