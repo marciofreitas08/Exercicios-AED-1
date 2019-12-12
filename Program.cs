@@ -1,35 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VerificaTriangulo2
+namespace Marcio1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string entrada;
-            Triangulo objeto;
-            Console.WriteLine(" Verifica se tres valores infirmados formam um trianfulo:");
-            Console.Write(" Lado A:");
-            entrada = Console.ReadLine();
-            objeto = new Triangulo();
-            objeto.ladoA = Convert.ToInt32(entrada);
-
-            Console.Write(" Lado B:");
-            entrada = Console.ReadLine();
-            objeto.ladoB = Convert.ToInt32(entrada);
-
-            Console.Write(" Lado C:");
-            entrada = Console.ReadLine();
-            objeto.ladoC = Convert.ToInt32(entrada);
-
-            objeto.verificaTriangulo();
-
-
-
+            int numero = 0;
+            Console.WriteLine("Entre com numero:");
+            numero = int.Parse(Console.ReadLine());
+            while (numero > 0)
+            {
+                Console.WriteLine(" Vou subtrair 2 do numero escolhido");
+                numero = numero - 2;
+                Console.WriteLine(" O numero agora é: {0}",numero);
+            }
         }
     }
 }
