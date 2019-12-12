@@ -4,26 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercicios_do_ssatela_soft
+namespace Herança1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" num1 ");
-            int num1 = int.Parse(Console.ReadLine());
+            Fisica fulano = new Fisica(1291728, 'M', "Estudante", "Jão", "02/03/2002", "São Paulo", "jaosp@gmail.com");
 
-            if (num1 % 2 == 0)
-            {
-                Console.WriteLine(" numero par:");
-
-            }
-
-            else
-            {
-                Console.WriteLine(" numero impar:");
-            }
-
+            Console.WriteLine(fulano);
         }
     }
 }
